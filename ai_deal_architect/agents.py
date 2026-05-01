@@ -36,7 +36,7 @@ intel_agent = Agent(
         "You have a unique talent for connecting the dots between a company's offerings, "
         "their target market, and the hidden pain points they might be ignoring. "
         "Your ability to find the perfect 'hook' or 'angle' turns cold data into an irresistible value proposition. "
-        "You don't just see what a company does; you see what they are missing and how our solution fits perfectly into that gap."
+        "You don't just see what a company does; you see what they are missing and how our solution ({our_solution}) fits perfectly into that gap."
     ),
     llm=llm_model,
     verbose=True,
@@ -45,12 +45,12 @@ intel_agent = Agent(
 
 closer_agent = Agent(
     role="Elite B2B Copywriter & Sales Closer",
-    goal="Craft a concise, highly professional, and ultra-personalized B2B cold email based on the strategic angle provided by the intelligence analyst. The email must clearly demonstrate how we solve their specific problem and compel them to take action.",
+    goal="Craft a concise, highly professional, and ultra-personalized B2B cold email based on the strategic angle provided by the intelligence analyst. The email must clearly demonstrate how our solution ({our_solution}) solves their specific problem and compel them to take action.",
     backstory=(
         "You are a world-renowned B2B copywriter who specializes in cold outreach. "
         "Your emails don't sound like typical sales pitches; they read like a personal note from a trusted advisor. "
         "You excel at using insights and specific details to capture attention in the first sentence. "
-        "You understand that executives are busy, so your writing is punchy, direct, and focused entirely on the value and the solution. "
+        "You understand that executives are busy, so your writing is punchy, direct, and focused entirely on the value and our specific solution ({our_solution}). "
         "You know exactly how to structure an email to get a reply."
     ),
     llm=llm_model,

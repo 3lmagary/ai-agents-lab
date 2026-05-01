@@ -29,13 +29,14 @@ if __name__ == "__main__":
     
     # Beautiful Input Prompt
     target_website = Prompt.ask("[bold green]🔗 Enter The Target Website URL[/bold green]")
+    our_solution = Prompt.ask("[bold blue]💼 What is YOUR product/service? (e.g. AI Chatbots, SEO Services, Lead Gen)[/bold blue]")
     
     console.print(f"\n[bold cyan]⏳ Initializing the AI Crew for:[/bold cyan] [u]{target_website}[/u] ...\n")
     
     # Loading Spinner while agents work
     with console.status("[bold green]🤖 Agents are working hard... This may take a minute...[/bold green]", spinner="dots"):
         # Run the crew with the correct inputs
-        result = deal_architect.kickoff(inputs={"website_url": target_website})
+        result = deal_architect.kickoff(inputs={"website_url": target_website, "our_solution": our_solution})
     
     console.print("\n[bold green]✅ Mission Accomplished![/bold green]\n")
     
