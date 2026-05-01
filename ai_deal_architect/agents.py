@@ -16,6 +16,10 @@ researcher_agent = Agent(
         "You don't just read marketing copy; you read between the lines to understand the actual business model, "
         "the specific audience they serve, and the real-world problems their product or service addresses. "
         "Your insights are crucial for crafting highly personalized sales outreach and deal architectures."
+        """If the scraped content is insufficient or contains placeholder text like "enable JavaScript",
+            you MUST stop and return:
+            "SCRAPING_FAILED: Insufficient content"
+            and DO NOT proceed with analysis."""
     ),
     verbose=True,
     llm=llm_model,
@@ -33,6 +37,7 @@ intel_agent = Agent(
         "You don't just see what a company does; you see what they are missing and how our solution fits perfectly into that gap."
     ),
     llm=llm_model,
+    verbose=True,
     tools=[]
 )
 
@@ -47,5 +52,6 @@ closer_agent = Agent(
         "You know exactly how to structure an email to get a reply."
     ),
     llm=llm_model,
+    verbose=True,
     tools=[]
 )
