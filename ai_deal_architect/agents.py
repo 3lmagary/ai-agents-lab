@@ -1,9 +1,8 @@
 from crewai import Agent, LLM
-
+from tools import website_tool
 # llms
 llm_model = LLM(
     model='openrouter/openai/gpt-4o-mini',
-    description="You are a strategic AI assistant that excels at business analysis."
 )
 
 # Agents
@@ -18,9 +17,9 @@ researcher = Agent(
         "the specific audience they serve, and the real-world problems their product or service addresses. "
         "Your insights are crucial for crafting highly personalized sales outreach and deal architectures."
     ),
-    # verbose=True,
+    verbose=True,
     llm=llm_model,
-    tools=[]
+    tools=[website_tool]
 )
 
 intel = Agent(
