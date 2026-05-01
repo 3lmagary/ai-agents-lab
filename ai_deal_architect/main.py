@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from crewai import Crew, Process
 from agents import *
 from tasks import *
