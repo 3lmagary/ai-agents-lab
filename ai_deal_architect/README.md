@@ -16,3 +16,17 @@ An autonomous multi-agent AI system built with **Python** and **CrewAI**. This s
 
 ## 💡 Business Value
 This automation saves hours of manual lead research and copywriting, allowing agencies and B2B companies to scale their outbound sales with hyper-personalized outreach.
+
+## 🚀 How to Start (Setup & Run)
+
+We have created an automated script that handles the entire setup process for you!
+
+1. Open your terminal in the project directory.
+2. Run the magic script:
+   ```bash
+   ./setup_and_run.sh
+   ```
+3. The script will ask you for your **OpenRouter** and **Firecrawl** API keys.
+4. It will automatically create your virtual environment, install all dependencies, and launch the AI!
+
+Enjoy your automated sales team! 🎉
