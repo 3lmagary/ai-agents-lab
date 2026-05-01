@@ -11,8 +11,7 @@ deal_architect = Crew(
 
 
 if __name__ == "__main__":
-    print("🚀 جاري إطلاق مهندس الصفقات الذكي...")
-    target_website = "https://bassthalk.com/"
+    target_website = input("Enter The Website URL: ")
     
     # Run the crew with the correct inputs
     result = deal_architect.kickoff(inputs={"website_url": target_website})
