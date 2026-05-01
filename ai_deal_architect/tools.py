@@ -1,4 +1,3 @@
-from crewai_tools import ScrapeWebsiteTool
-
-website_tool = ScrapeWebsiteTool()
+from crewai_tools import FirecrawlScrapeWebsiteTool
+website_tool = FirecrawlScrapeWebsiteTool()
 
