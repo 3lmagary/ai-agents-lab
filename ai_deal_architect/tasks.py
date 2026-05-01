@@ -1,5 +1,5 @@
 from crewai import Task
-from agents import researcher, intel, closer
+from agents import researcher_agent, intel_agent, closer_agent
 
 researcher_task = Task(
     description=(
@@ -17,7 +17,7 @@ researcher_task = Task(
         "3) Ideal Customer Profile (ICP), "
         "4) Core Pain Points Addressed."
     ),
-    agent=researcher
+    agent=researcher_agent
 )
 
 intel_task = Task(
@@ -33,7 +33,7 @@ intel_task = Task(
         "2) The Strategic Rationale (Why this angle will resonate based on their specific pain points), "
         "3) A 'Vulnerability/Gap' analysis highlighting what they are currently missing."
     ),
-    agent=intel
+    agent=intel_agent
 )
 
 closer_task = Task(
@@ -52,5 +52,5 @@ closer_task = Task(
         "- A single, clear, and low-friction Call to Action (CTA). "
         "The total email length must be under 150 words."
     ),
-    agent=closer
+    agent=closer_agent
 )

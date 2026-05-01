@@ -7,7 +7,7 @@ llm_model = LLM(
 
 # Agents
 
-researcher = Agent(
+researcher_agent = Agent(
     role="Business Analyst & Website Researcher",
     goal="Thoroughly analyze the target client's website ({website_url}) to extract key business insights. Identify exactly what products or services they are selling, who their target audience is, and what core problems or pain points they solve for their customers.",
     backstory=(
@@ -22,7 +22,7 @@ researcher = Agent(
     tools=[website_tool]
 )
 
-intel = Agent(
+intel_agent = Agent(
     role="Strategic Intelligence Analyst & Opportunity Spotter",
     goal="Analyze the research data provided by the researcher to extract a powerful 'Sales Angle' or identify specific vulnerabilities/gaps in the client's current approach that we can leverage in our outreach.",
     backstory=(
@@ -36,7 +36,7 @@ intel = Agent(
     tools=[]
 )
 
-closer = Agent(
+closer_agent = Agent(
     role="Elite B2B Copywriter & Sales Closer",
     goal="Craft a concise, highly professional, and ultra-personalized B2B cold email based on the strategic angle provided by the intelligence analyst. The email must clearly demonstrate how we solve their specific problem and compel them to take action.",
     backstory=(
